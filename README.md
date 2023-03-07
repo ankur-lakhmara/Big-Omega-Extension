@@ -1,10 +1,12 @@
-# BigΩ
-BigΩ extension Backend Code
+# Big Ω - Unleash the Complexity
 
-- [Documents](https://docs.google.com/document/d/1F5o8iNBAFK-Svd5Oq53o7c85AfdcDv-HecuqNPuci-0/edit?usp=sharing)
+## What is Big Ω?
+A chrome extension that helps in revealing company tags infront of any problem you are solving on [LeetCode](https://leetcode.com/)
+
+
 
 ## Contributors
-- Omkar Ajagunde🖥️
+- Omkar Ajagunde
 - Gourav R
 - Gaurav Garg
 - Rohan Prakash
