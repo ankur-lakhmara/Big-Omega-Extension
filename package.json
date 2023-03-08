@@ -1,0 +1,47 @@
+{
+	"name": "easy-platform-adoption-tools",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@popperjs/core": "^2.5.4",
+		"@testing-library/jest-dom": "^5.11.5",
+		"@testing-library/react": "^11.1.1",
+		"@testing-library/user-event": "^12.2.0",
+		"bestzip": "^2.2.1",
+		"react": "^18.1.0",
+		"react-dom": "^18.1.0",
+		"react-scripts": "4.0.0",
+		"web-vitals": "^0.2.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "export INLINE_RUNTIME_CHUNK=false && react-scripts build && npm run zip-build",
+		"build:prod": "export INLINE_RUNTIME_CHUNK=false && react-scripts build && npm run zip-build && npm run move-files",
+		"zip-build": "bestzip leetcode-live.zip build/",
+		"move-files": "cp leetcode-live.zip ../webapp/public",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"sass": "^1.52.0",
+		"env-cmd": "^10.1.0"
+	}
+}

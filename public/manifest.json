@@ -1,0 +1,32 @@
+{
+	"manifest_version": 3,
+	"name": "Big Ω",
+	"description": "Chrome extension that helps to collaborate with peers while practicing competitive programming",
+	"version": "1.0.0",
+	"icons": {
+		"16": "logo512.png",
+		"48": "logo512.png",
+		"128": "logo512.png"
+	},
+	"action": {
+		"default_icon": "favicon.ico",
+		"default_title": "Big Ω"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery.js"]
+		}
+	],
+	"permissions": ["scripting", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+	"web_accessible_resources": [
+		{
+			"resources": ["index.html", "jquery.js", "static/*", "favicon.ico", "logo512.png"],
+			"matches": ["<all_urls>"]
+		}
+	]
+}
