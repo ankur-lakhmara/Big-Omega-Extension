@@ -61,7 +61,8 @@ function App() {
 		);
 	};
 
-	return <div id="windowFrame">Coming soon 1. Sticky bar on right side</div>;
+	// Coming soon 1. Sticky bar on right side
+	return <div id="windowFrame"></div>;
 }
 
 export default App;
