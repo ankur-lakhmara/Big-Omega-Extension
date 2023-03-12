@@ -24,4 +24,3 @@ A chrome extension that helps in revealing company tags infront of any problem y
 - Omkar Ajagunde
 - Gourav R
 - Gaurav Garg
-- Rohan Prakash
