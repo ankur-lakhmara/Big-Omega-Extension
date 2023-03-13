@@ -16,7 +16,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build:prod": "export INLINE_RUNTIME_CHUNK=false && react-scripts build && npm run zip-build && npm run move-files",
-		"zip-build": "bestzip leetcode-live.zip build/",
+		"zip-build": "bestzip big-omega-extension.zip build/",
 		"move-files": "cp leetcode-live.zip ../webapp/public",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
