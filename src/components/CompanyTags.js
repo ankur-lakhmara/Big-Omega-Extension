@@ -53,10 +53,26 @@ function CompanyTags() {
 								color: "#262626bf",
 								fontSize: ".75rem",
 								borderRadius: "4px",
-								whiteSpace: "nowrap"
+								whiteSpace: "nowrap",
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center"
 							}}
 						>
-							{company.company}
+							<div>{company.company}</div>
+							<div
+								style={{
+									marginLeft: "10px",
+									background: "white",
+									padding: "3px 5px 3px 5px",
+									borderRadius: "4px",
+									fontWeight: "600",
+									fontSize: ".6rem",
+									opacity: ".8"
+								}}
+							>
+								{company.num_occur}
+							</div>
 						</div>
 					);
 				})}
