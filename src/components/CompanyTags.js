@@ -14,8 +14,41 @@ function CompanyTags() {
 		// e.g. /problems/flip-string-to-monotone-increasing/
 		let problem = window.location.pathname.split("/")[2];
 		setState((prevState) => ({ ...prevState, companies: problemToCompanyMatcher[host][problem] || [] }));
-		console.log("companies - ", problemToCompanyMatcher[host][problem]);
+
+		handleURLChange();
+		window.onurlchange = (event) => {
+			let host = window.location.host;
+			// e.g. /problems/flip-string-to-monotone-increasing/
+			let problem = window.location.pathname.split("/")[2];
+			setState((prevState) => ({ ...prevState, companies: problemToCompanyMatcher[host][problem] || [] }));
+		};
 	}, []);
+
+	const handleURLChange = () => {
+		const hasNativeEvent = Object.keys(window).includes("onurlchange");
+		if (!hasNativeEvent) {
+			let oldURL = location.href;
+			setInterval(() => {
+				const newURL = location.href;
+				if (oldURL === newURL) {
+					return;
+				}
+				const urlChangeEvent = new CustomEvent("urlchange", {
+					detail: {
+						oldURL,
+						newURL
+					}
+				});
+				oldURL = newURL;
+				dispatchEvent(urlChangeEvent);
+			}, 25);
+			window.addEventListener("urlchange", (event) => {
+				if (typeof onurlchange === "function") {
+					onurlchange(event);
+				}
+			});
+		}
+	};
 
 	const toggleExpansion = () => {
 		setState((prevState) => ({ ...prevState, isExpanded: !prevState.isExpanded }));

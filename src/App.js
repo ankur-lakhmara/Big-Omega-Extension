@@ -38,7 +38,6 @@ function App() {
 				const root = ReactDOM.createRoot(newElem);
 				root.render(<CompanyTags />, newElem);
 				clearInterval(interval);
-				console.log("again....");
 			}
 		}, 3000);
 	}, []);
