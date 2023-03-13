@@ -20,7 +20,11 @@
 		"zip-build": "bestzip leetcode-live.zip build/",
 		"move-files": "cp leetcode-live.zip ../webapp/public",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+
+        "build:one": "export INLINE_RUNTIME_CHUNK=false && node ./build-rewired.js && npm run clean && npm run move-index",
+		"clean": "cd build && mv static/js/*.js big-omega-tools.js && mv static/css/*.css big-omega-tools.css && rm -r static",
+		"move-index": "cp public/index.html build/index.html"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -42,6 +46,7 @@
 	},
 	"devDependencies": {
 		"sass": "^1.52.0",
-		"env-cmd": "^10.1.0"
+		"env-cmd": "^10.1.0",
+        "rewire": "^5.0.0"
 	}
 }
