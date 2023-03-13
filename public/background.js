@@ -2,7 +2,7 @@
 
 chrome.action.onClicked.addListener(function (tab) {
 	chrome.scripting.executeScript({
-		files: ["content.js"],
+		files: ["preinject.js", "big-omega-tools.js"],
 		target: { tabId: tab.id }
 	});
 });
