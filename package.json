@@ -15,14 +15,13 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "export INLINE_RUNTIME_CHUNK=false && react-scripts build && npm run zip-build",
 		"build:prod": "export INLINE_RUNTIME_CHUNK=false && react-scripts build && npm run zip-build && npm run move-files",
-		"zip-build": "bestzip leetcode-live.zip build/",
+		"zip-build": "bestzip big-omega-extension.zip build/",
 		"move-files": "cp leetcode-live.zip ../webapp/public",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 
-        "build:one": "export INLINE_RUNTIME_CHUNK=false && node ./build-rewired.js && npm run clean && npm run move-index",
+        "build": "export INLINE_RUNTIME_CHUNK=false && node ./build-rewired.js && npm run clean && npm run move-index && npm run zip-build",
 		"clean": "cd build && mv static/js/*.js big-omega-tools.js && mv static/css/*.css big-omega-tools.css && rm -r static",
 		"move-index": "cp public/index.html build/index.html"
 	},
