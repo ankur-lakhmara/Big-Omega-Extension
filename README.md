@@ -5,10 +5,6 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 [![first-timers-only-friendly](http://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://code.publiclab.org#r=all)
 
-<!--[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-<a href="https://github.com/codedecks-in/LeetCode-Solutions/pulls"><img src="https://img.shields.io/github/issues-pr/codedecks-in/LeetCode-Solutions" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/codedecks-in/LeetCode-Solutions/issues"><img src="https://img.shields.io/github/issues/codedecks-in/LeetCode-Solutions" alt="Issues Badge"/></a>
-
 ## What is Big Ω?
 A chrome extension that helps in revealing company tags infront of any problem you are solving on [LeetCode](https://leetcode.com/)
 
