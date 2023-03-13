@@ -6,21 +6,30 @@ import CloseButton from "./CloseButton";
 function CompanyTags() {
 	const [state, setState] = useState({
 		companies: [],
-		isExpanded: false
+		isExpanded: false,
+		isClosed: false
 	});
 
 	useEffect(() => {
 		let host = window.location.host;
 		// e.g. /problems/flip-string-to-monotone-increasing/
 		let problem = window.location.pathname.split("/")[2];
-		setState((prevState) => ({ ...prevState, companies: problemToCompanyMatcher[host][problem] || [] }));
+		setState((prevState) => ({
+			...prevState,
+			companies: problemToCompanyMatcher[host][problem] || [],
+			isClosed: false
+		}));
 
 		handleURLChange();
 		window.onurlchange = (event) => {
 			let host = window.location.host;
 			// e.g. /problems/flip-string-to-monotone-increasing/
 			let problem = window.location.pathname.split("/")[2];
-			setState((prevState) => ({ ...prevState, companies: problemToCompanyMatcher[host][problem] || [] }));
+			setState((prevState) => ({
+				...prevState,
+				companies: problemToCompanyMatcher[host][problem] || [],
+				isClosed: false
+			}));
 		};
 	}, []);
 
@@ -55,14 +64,14 @@ function CompanyTags() {
 	};
 
 	const handleCloseTags = () => {
-		let elem = document.getElementById("big-omega-topbar");
-		if (elem) {
-			elem.remove();
-		}
+		setState((prevState) => ({ ...prevState, isClosed: !prevState.isClosed }));
 	};
 
 	return (
-		<div id="big-omega-topbar" style={{ width: "100vw", display: "flex", transition: "all 400ms ease" }}>
+		<div
+			id="big-omega-topbar"
+			style={{ width: "100vw", transition: "all 400ms ease", display: state.isClosed ? "none" : "flex" }}
+		>
 			<div
 				className="companyTagsContainer"
 				style={{
