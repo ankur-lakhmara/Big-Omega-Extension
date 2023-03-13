@@ -65,25 +65,26 @@ function CompanyTags() {
 				style={{
 					right: "10px",
 					width: "50px",
-					transform: state.isExpanded ? "rotate(180deg)" : "",
 					display: "flex",
-					justifyContent: "center",
-					padding: "15px",
-					alignItems: state.isExpanded ? "flex-end" : "center",
+					justifyContent: "flex-end",
+					padding: "10px",
+					alignItems: "flex-start",
 					cursor: "pointer"
 				}}
 				onClick={toggleExpansion}
 			>
-				<ChevronDown />
+				<div style={{ transform: state.isExpanded ? "rotate(180deg)" : "" }}>
+					<ChevronDown style={{ transform: state.isExpanded ? "rotate(180deg)" : "" }} />
+				</div>
 			</div>
 			<div
 				style={{
 					right: "10px",
-					padding: "15px",
+					padding: "10px",
 					width: "50px",
 					display: "flex",
-					justifyContent: "center",
-					alignItems: state.isExpanded ? "flex-end" : "center",
+					justifyContent: "flex-start",
+					alignItems: "flex-start",
 					cursor: "pointer"
 				}}
 				onClick={handleCloseTags}
