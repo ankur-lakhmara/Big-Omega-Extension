@@ -14,18 +14,17 @@ function makeApiCall(options) {
 
 if (typeof init === "undefined") {
 	/* global chrome */
-	console.log("Leetcode live extension instance created");
 	function init() {
 		//External Script loading logic
-		// var ele = document.createElement("script");
+		//var ele = document.createElement("script");
 		//verify the script path, it should be from public folder of extention folder
-		// var scriptPath = chrome.runtime.getURL("leetcode-tools.js");
+		// var scriptPath = chrome.runtime.getURL("jquery.js");
 		// ele.setAttribute("src", scriptPath);
 		// document.body.appendChild(ele);
 
 		// eslint-disable-next-line no-undef
 		const extensionOrigin = "chrome-extension://" + chrome.runtime.id;
-		console.log(chrome.runtime, extensionOrigin, chrome.runtime.getURL("index.html"));
+		//console.log(chrome.runtime, extensionOrigin, chrome.runtime.getURL("index.html"));
 
 		// Resource urls
 		//console.log("url : ", chrome.runtime.getURL("<resource urls>"));
@@ -33,19 +32,19 @@ if (typeof init === "undefined") {
 		if (!location.ancestorOrigins.contains(extensionOrigin)) {
 			// Fetch the local React index.html page
 			// eslint-disable-next-line no-undef
-			fetch(chrome.runtime.getURL("index.html") /*, options */)
-				.then((response) => response.text())
-				.then((html) => {
-					const styleStashHTML = html.replace(/\/static\//g, `${extensionOrigin}/static/`);
-					// eslint-disable-next-line no-undef
-					$(styleStashHTML).appendTo("body");
-					// $(`<div style="display: none" id="beeURL">${chrome.runtime.getURL("resource url from public folder")}</div>`).appendTo("body");
-					$(`<div style="display: none" id="extId">${chrome.runtime.id}</div>`).appendTo("body");
-					$(`<script> window.makeApiCall = ${makeApiCall}</script>`).appendTo("body");
-				})
-				.catch((error) => {
-					console.warn(error);
-				});
+			/**
+			 * convert following line to js
+			 * $(`<div style="display: none" id="extId">${chrome.runtime.id}</div>`).appendTo("body");
+			 * $(`<script> window.makeApiCall = ${makeApiCall}</script>`).appendTo("body");
+			 */
+			// let script1 = document.createElement("script");
+			// script1.innerHTML = `window.makeApiCall = ${makeApiCall}`;
+			// document.body.appendChild(script1);
+			// let div1 = document.createElement("script");
+			// div1.id = "extId";
+			// div1.style.display = "none";
+			// div1.innerHTML = `${chrome.runtime.id}`;
+			// document.body.appendChild(div1);
 		}
 	}
 

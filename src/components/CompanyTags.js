@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import problemToCompanyMatcher from "../resources/company-wise-problem-list";
+import ChevronDown from "./ChevronDown";
+import CloseButton from "./CloseButton";
 
 function CompanyTags() {
 	const [state, setState] = useState({
-		companies: []
+		companies: [],
+		isExpanded: false
 	});
 
 	useEffect(() => {
@@ -14,26 +17,80 @@ function CompanyTags() {
 		console.log("companies - ", problemToCompanyMatcher[host][problem]);
 	}, []);
 
+	const toggleExpansion = () => {
+		setState((prevState) => ({ ...prevState, isExpanded: !prevState.isExpanded }));
+	};
+
+	const handleCloseTags = () => {
+		let elem = document.getElementById("big-omega-topbar");
+		if (elem) {
+			elem.remove();
+		}
+	};
+
 	return (
-		<div className="companyTagsContainer" style={{ display: "flex", padding: "5px" }}>
-			{state.companies.map((company, idx) => {
-				return (
-					<div
-						key={company.company + idx}
-						className="companyTagsContainer--tag"
-						style={{
-							margin: "5px",
-							padding: "5px 10px 5px 10px",
-							border: "1px solid #4087F1",
-							background: "#C5DCFF",
-							color: "#4087F1",
-							fontSize: "0.8rem"
-						}}
-					>
-						{company.company}
-					</div>
-				);
-			})}
+		<div id="big-omega-topbar" style={{ width: "100vw", display: "flex", transition: "all 400ms ease" }}>
+			<div
+				className="companyTagsContainer"
+				style={{
+					display: "flex",
+					padding: "5px",
+					width: "calc(100vw - 100px)",
+					overflowX: state.isExpanded ? "hidden" : "scroll",
+					flexWrap: state.isExpanded ? "wrap" : "nowrap"
+				}}
+			>
+				{state.companies.map((company, idx) => {
+					return (
+						<div
+							key={company.company + idx}
+							className="companyTagsContainer--tag"
+							style={{
+								margin: "5px",
+								padding: "5px 10px 5px 10px",
+								border: "1px solid #4087F1",
+								background: "#C5DCFF",
+								color: "#262626bf",
+								fontSize: ".75rem",
+								borderRadius: "4px",
+								whiteSpace: "nowrap"
+							}}
+						>
+							{company.company}
+						</div>
+					);
+				})}
+			</div>
+			<div
+				style={{
+					right: "10px",
+					width: "50px",
+					display: "flex",
+					justifyContent: "flex-end",
+					padding: "10px",
+					alignItems: "flex-start",
+					cursor: "pointer"
+				}}
+				onClick={toggleExpansion}
+			>
+				<div style={{ transform: state.isExpanded ? "rotate(180deg)" : "" }}>
+					<ChevronDown style={{ transform: state.isExpanded ? "rotate(180deg)" : "" }} />
+				</div>
+			</div>
+			<div
+				style={{
+					right: "10px",
+					padding: "10px",
+					width: "50px",
+					display: "flex",
+					justifyContent: "flex-start",
+					alignItems: "flex-start",
+					cursor: "pointer"
+				}}
+				onClick={handleCloseTags}
+			>
+				<CloseButton />
+			</div>
 		</div>
 	);
 }
