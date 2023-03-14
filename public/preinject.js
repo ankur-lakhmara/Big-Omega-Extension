@@ -1,4 +1,4 @@
-oldElems = document.querySelectorAll("#windowFrame");
+oldElems = document.querySelectorAll("#big-omega-extention");
 if (oldElems && oldElems.length > 0) {
 	Array.from(oldElems).forEach((e) => {
 		e.remove();
@@ -6,5 +6,5 @@ if (oldElems && oldElems.length > 0) {
 }
 
 elem = document.createElement("div");
-elem.id = "windowFrame";
+elem.id = "big-omega-extention";
 document.body.appendChild(elem);

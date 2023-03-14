@@ -10,7 +10,7 @@
 		"bestzip": "^2.2.1",
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
-		"react-scripts": "4.0.0",
+		"react-scripts": "^2.1.3",
 		"web-vitals": "^0.2.4"
 	},
 	"scripts": {
@@ -20,8 +20,7 @@
 		"move-files": "cp leetcode-live.zip ../webapp/public",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-
-        "build": "export INLINE_RUNTIME_CHUNK=false && node ./build-rewired.js && npm run clean && npm run move-index && npm run zip-build",
+		"build": "export INLINE_RUNTIME_CHUNK=false && node ./build-rewired.js && npm run clean && npm run move-index && npm run zip-build",
 		"clean": "cd build && mv static/js/*.js big-omega-tools.js && mv static/css/*.css big-omega-tools.css && rm -r static",
 		"move-index": "cp public/index.html build/index.html"
 	},
@@ -44,8 +43,8 @@
 		]
 	},
 	"devDependencies": {
-		"sass": "^1.52.0",
 		"env-cmd": "^10.1.0",
-        "rewire": "^5.0.0"
+		"rewire": "^5.0.0",
+		"sass": "^1.52.0"
 	}
 }

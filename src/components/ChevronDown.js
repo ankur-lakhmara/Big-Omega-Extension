@@ -1,6 +1,6 @@
 import React from "react";
 
-function ChevronDown() {
+function ChevronDown(props) {
 	return (
 		<svg
 			version="1.1"
@@ -10,6 +10,7 @@ function ChevronDown() {
 			x="0px"
 			y="0px"
 			viewBox="0 0 32 32"
+			fill={"#4087F1"}
 			style={{
 				enableBackground: "new 0 0 32 32",
 				width: "20px"

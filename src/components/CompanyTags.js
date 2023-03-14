@@ -3,11 +3,12 @@ import problemToCompanyMatcher from "../resources/company-wise-problem-list";
 import ChevronDown from "./ChevronDown";
 import CloseButton from "./CloseButton";
 
-function CompanyTags() {
+function CompanyTags(props) {
 	const [state, setState] = useState({
 		companies: [],
 		isExpanded: false,
-		isClosed: false
+		isClosed: false,
+		theme: props.theme
 	});
 
 	useEffect(() => {
@@ -25,10 +26,12 @@ function CompanyTags() {
 			let host = window.location.host;
 			// e.g. /problems/flip-string-to-monotone-increasing/
 			let problem = window.location.pathname.split("/")[2];
+			let theme = document.querySelector("html").dataset.theme;
 			setState((prevState) => ({
 				...prevState,
 				companies: problemToCompanyMatcher[host][problem] || [],
-				isClosed: false
+				isClosed: false,
+				theme: theme
 			}));
 		};
 	}, []);
@@ -36,9 +39,9 @@ function CompanyTags() {
 	const handleURLChange = () => {
 		const hasNativeEvent = Object.keys(window).includes("onurlchange");
 		if (!hasNativeEvent) {
-			let oldURL = location.href;
+			let oldURL = window.location.href;
 			setInterval(() => {
-				const newURL = location.href;
+				const newURL = window.location.href;
 				if (oldURL === newURL) {
 					return;
 				}
@@ -53,7 +56,7 @@ function CompanyTags() {
 			}, 25);
 			window.addEventListener("urlchange", (event) => {
 				if (typeof onurlchange === "function") {
-					onurlchange(event);
+					window.onurlchange(event);
 				}
 			});
 		}
@@ -70,7 +73,11 @@ function CompanyTags() {
 	return (
 		<div
 			id="big-omega-topbar"
-			style={{ width: "100vw", transition: "all 400ms ease", display: state.isClosed ? "none" : "flex" }}
+			style={{
+				width: "100vw",
+				transition: "all 400ms ease",
+				display: state.isClosed || state.companies.length === 0 ? "none" : "flex"
+			}}
 		>
 			<div
 				className="companyTagsContainer"
@@ -132,7 +139,7 @@ function CompanyTags() {
 				onClick={toggleExpansion}
 			>
 				<div style={{ transform: state.isExpanded ? "rotate(180deg)" : "" }}>
-					<ChevronDown style={{ transform: state.isExpanded ? "rotate(180deg)" : "" }} />
+					<ChevronDown theme={state.theme} style={{ transform: state.isExpanded ? "rotate(180deg)" : "" }} />
 				</div>
 			</div>
 			<div
@@ -147,7 +154,7 @@ function CompanyTags() {
 				}}
 				onClick={handleCloseTags}
 			>
-				<CloseButton />
+				<CloseButton theme={state.theme} />
 			</div>
 		</div>
 	);
