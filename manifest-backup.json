@@ -19,6 +19,7 @@
 			"js": ["preinject.js", "big-omega-tools.js"]
 		}
 	],
+	"permissions": [ "activeTab"],
 	"web_accessible_resources": [
 		{
 			"resources": ["build/*"],
