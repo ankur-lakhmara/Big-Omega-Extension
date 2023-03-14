@@ -1,12 +1,10 @@
 {
 	"manifest_version": 3,
 	"name": "Big Ω",
-	"description": "Chrome extension that helps to collaborate with peers while practicing competitive programming",
+	"description": "Programming in community gices you wings!!",
 	"version": "1.0.0",
 	"icons": {
-		"16": "logo512.png",
-		"48": "logo512.png",
-		"128": "logo512.png"
+		"128": "logo128.png"
 	},
 	"action": {
 		"default_icon": "favicon.ico",
@@ -17,15 +15,14 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
+			"matches": ["https://leetcode.com/*", "http://leetcode.com/*","https://www.leetcode.com/*", "http://www.leetcode.com/*"],
 			"js": ["preinject.js", "big-omega-tools.js"]
 		}
 	],
-	"permissions": ["scripting", "activeTab"],
-    "host_permissions": ["<all_urls>"],
+	"permissions": [ "activeTab"],
 	"web_accessible_resources": [
 		{
-			"resources": ["index.html", "build/*", "favicon.ico", "logo512.png", "preinject.js"],
+			"resources": ["build/*"],
 			"matches": ["<all_urls>"]
 		}
 	]

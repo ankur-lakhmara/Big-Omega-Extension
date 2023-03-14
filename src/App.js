@@ -36,7 +36,9 @@ function App() {
 				let newElem = document.createElement("div");
 				document.body.prepend(newElem);
 				const root = ReactDOM.createRoot(newElem);
-				root.render(<CompanyTags />, newElem);
+
+				let theme = document.querySelector("html").dataset.theme;
+				root.render(<CompanyTags theme={theme} />, newElem);
 				clearInterval(interval);
 			}
 		}, 3000);
@@ -61,7 +63,7 @@ function App() {
 	};
 
 	// Coming soon 1. Sticky bar on right side
-	return <div id="windowFrame"></div>;
+	return <div id="big-omega-extention"></div>;
 }
 
 export default App;
