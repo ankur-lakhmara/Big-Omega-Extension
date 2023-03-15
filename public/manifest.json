@@ -8,7 +8,7 @@
 	},
 	"action": {
 		"default_icon": "favicon.ico",
-		"default_title": "Big Ω"
+		"default_title": "Big Ω - Enhance Leetcode, Hackerrank experience "
 	},
 	"background": {
 		"service_worker": "background.js"
