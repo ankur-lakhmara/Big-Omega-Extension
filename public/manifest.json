@@ -1,14 +1,14 @@
 {
 	"manifest_version": 3,
-	"name": "Big Ω",
-	"description": "Programming in community gices you wings!!",
+	"name": "Big Ω - Enhance Leetcoding experience",
+	"description": "Programming in community gives you wings!!",
 	"version": "1.0.0",
 	"icons": {
 		"128": "logo128.png"
 	},
 	"action": {
-		"default_icon": "favicon.ico",
-		"default_title": "Big Ω - Enhance Leetcode, Hackerrank experience "
+		"default_icon": "logo128.png",
+		"default_title": "Big Ω - Enhance Leetcode, Hackerrank experience"
 	},
 	"background": {
 		"service_worker": "background.js"
