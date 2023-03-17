@@ -1,18 +1,33 @@
-# Big Ω - Enhance Leetcoding experience
+<h1 align="center">
+  <a href="https://standardjs.com"><img src="https://github.com/codedecks-in/Big-Omega-Extension/blob/main/public/logo128.png" alt="LeetHub - Automatically sync your code to GitHub." width="80"></a>
+  <br>
+  <a href="https://chrome.google.com/webstore/detail/big-%CF%89-enhance-leetcoding/hfjfkofmpdgbfpkgnknikojbpljnkfkf">Big Ω - Enhance Leetcoding experience
+  <br>
+  <br>
+</h1>
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)&nbsp;
-![Language](https://img.shields.io/badge/language-JS-yellow.svg)&nbsp;
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
-[![first-timers-only-friendly](http://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://code.publiclab.org#r=all)
+<p align="center">
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"/>
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/big-%CF%89-enhance-leetcoding/hfjfkofmpdgbfpkgnknikojbpljnkfkf">
+    <img src="https://img.shields.io/chrome-web-store/v/hfjfkofmpdgbfpkgnknikojbpljnkfkf.svg" alt="chrome-webstore"/>
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/big-%CF%89-enhance-leetcoding/hfjfkofmpdgbfpkgnknikojbpljnkfkf">
+    <img src="https://img.shields.io/chrome-web-store/d/hfjfkofmpdgbfpkgnknikojbpljnkfkf.svg" alt="users">
+  </a>
+  <a href="https://github.com/codedecks-in/Big-Omega-Extension/graphs/contributors" alt="Contributors">
+    <img src="https://img.shields.io/github/contributors/codedecks-in/Big-Omega-Extension" />
+  </a>
+  <a href="https://github.com/codedecks-in/Big-Omega-Extension/issues" alt="Contributors">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" />
+  </a>
+  <a href="https://code.publiclab.org#r=all" alt="Contributors">
+    <img src="http://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square" />
+  </a>
+</p>
 
-<!-- PLACE_HOLDER_AFTER_LAUNCH
-[![Chrome](https://user-images.githubusercontent.com/53124886/111952712-34f12300-8aee-11eb-9fdd-ad579a1eb235.png)](https://chrome.google.com/webstore/detail/)
-
-<div align="left">
-  <a href="https://www.producthunt.com/posts/leethub?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-leethub" target="_blank">
-    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=275757&theme=light" alt="Big Ω - Enhance Leetcoding experience | Product Hunt" /> </a>
-</div>
--->
+[![Chrome](https://user-images.githubusercontent.com/53124886/111952712-34f12300-8aee-11eb-9fdd-ad579a1eb235.png)](https://chrome.google.com/webstore/detail/big-%CF%89-enhance-leetcoding/hfjfkofmpdgbfpkgnknikojbpljnkfkf) <a href="https://www.producthunt.com/posts/big-enhance-leetcoding-experience?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-big&#0045;enhance&#0045;leetcoding&#0045;experience" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384515&theme=light" alt="Big&#0032;Ω&#0032;&#0045;&#0032;Enhance&#0032;Leetcoding&#0032;experience - Programming&#0032;in&#0032;community&#0032;gives&#0032;you&#0032;wings&#0033;&#0033; | Product Hunt" style="width: 350px; height: 154px;" width="250" height="54"/>
 
 ## Big Ω - Demo (YouTube Video):
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZdQ4XVUSr4o
