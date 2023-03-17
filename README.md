@@ -5,10 +5,19 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 [![first-timers-only-friendly](http://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://code.publiclab.org#r=all)
 
-## Big Ω - Experience (YouTube Video):
+<!-- PLACE_HOLDER_AFTER_LAUNCH
+[![Chrome](https://user-images.githubusercontent.com/53124886/111952712-34f12300-8aee-11eb-9fdd-ad579a1eb235.png)](https://chrome.google.com/webstore/detail/)
+
+<div align="left">
+  <a href="https://www.producthunt.com/posts/leethub?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-leethub" target="_blank">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=275757&theme=light" alt="Big Ω - Enhance Leetcoding experience | Product Hunt" /> </a>
+</div>
+-->
+
+## Big Ω - Demo (YouTube Video):
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZdQ4XVUSr4o
-" target="_blank"><img src="http://img.youtube.com/vi/ZdQ4XVUSr4o/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="600" height="480" border="10" /></a>
+" target="_blank"><img src="https://github.com/codedecks-in/Big-Omega-Extension/blob/main/public/big-omega.png" 
+alt="Big Ω - Enhance Leetcoding experience" height="500" border="10" /></a>
 
 ## What is Big Ω?
 Big Ω is a browser extension which enhances your collaborative experience while you are solving coding problems online on various competitive programming websites like 
