@@ -70,6 +70,6 @@ your feedback and constructive criticism, is always appreciated, and we look for
 
 
 ## Contributors
-- Omkar Ajagunde
-- Gourav R
-- Gaurav Garg
+- [Omkar Ajagunde](https://www.linkedin.com/in/omkarajagunde/)
+- [Gourav R](https://www.linkedin.com/in/grusiya/)
+- [Gaurav Garg](https://www.linkedin.com/in/gaurav-garg-339518141/)
