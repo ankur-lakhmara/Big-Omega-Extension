@@ -30,7 +30,7 @@ function CompanyTags(props) {
 	const [state, setState] = useState({
 		companies: [],
 		isExpanded: false,
-		isCollapsed: false,
+		isClosed: false,
 		theme: props.theme,
 		isTagsContainerScrollable: false
 	});
@@ -43,7 +43,7 @@ function CompanyTags(props) {
 		setState((prevState) => ({
 			...prevState,
 			companies: problemToCompanyMatcher[host][problem] || [],
-			isCollapsed: false
+			isClosed: false
 		}));
 
 		handleURLChange();
@@ -56,14 +56,14 @@ function CompanyTags(props) {
 			setState((prevState) => ({
 				...prevState,
 				companies: problemToCompanyMatcher[host][problem] || [],
-				isCollapsed: false,
+				isClosed: false,
 				theme: theme
 			}));
 		};
 	}, []);
 
 	useEffect(() => {
-		if (state.isCollapsed && state.companies.length > 0) {
+		if (state.isClosed && state.companies.length > 0) {
 			let btns = document.querySelector(
 				"#__next > div > div > div > nav > div > div > div.relative.ml-4.flex.items-center.space-x-4"
 			);
@@ -77,7 +77,7 @@ function CompanyTags(props) {
 			let collapseBtn = document.getElementById("big-omega-collapse-wrapper");
 			if (collapseBtn) collapseBtn.remove();
 		}
-	}, [state.isCollapsed]);
+	}, [state.isClosed]);
 
 	const handleURLChange = () => {
 		const hasNativeEvent = Object.keys(window).includes("onurlchange");
@@ -110,10 +110,10 @@ function CompanyTags(props) {
 	};
 
 	const handleCollapseTags = () => {
-		setState((prevState) => ({ ...prevState, isCollapsed: !prevState.isCollapsed }));
+		setState((prevState) => ({ ...prevState, isClosed: !prevState.isClosed }));
 	};
 
-	let shouldCollapse = state.isCollapsed || state.companies.length === 0;
+	let shouldCollapse = state.isClosed || state.companies.length === 0;
 
 	return (
 		<div
