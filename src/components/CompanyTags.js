@@ -56,7 +56,6 @@ function CompanyTags(props) {
 			setState((prevState) => ({
 				...prevState,
 				companies: problemToCompanyMatcher[host][problem] || [],
-				isClosed: false,
 				theme: theme
 			}));
 		};
